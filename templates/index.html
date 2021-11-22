@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <title>Student academic performance</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/performance.css')}}">
+    <meta charset="UTF-8">
+
+
+</head>
+
+<body>
+
+    <div id="background-header"></div>
+    <div id="container">
+
+         <div id="header">
+
+            <img id="logo" src="{{url_for('static', filename='img/sepa.png')}}" alt="Logo" />
+
+
+            <ul id="ul-header">
+                <li><a class="active" href="/">Home</a></li>
+                <li><a href="students">Students</a></li>
+                <li><a href="vis">Visualization</a></li>
+                <li><a href="aboutp">About Project</a></li>
+            </ul>
+         </div>
+
+        <div id="empty"></div>
+
+        <div id="background-Home">
+            <p class="slogan"> Welcome to Student Academic Performance </p>
+              <center>
+            <div class="main_cat" >
+                        <center>
+
+                        <a href="{{ url_for('dataForm') }}" class="btn" style="color: black; text-decoration: none;">Start</a>
+</center>
+                    </div>
+            </center>
+        </div>
+         <div id="background-footer-hidden">
+
+            <div class="footer">
+                 <p>Please contact Orchid group at Orchid.group@gmail.com with problems or questions about this web page.</p>
+                 <p>DISCLAIMER: <em>Student academic performance</em> </p>
+                 <p>&copy; 2020 Student performance. All Rights Reserved.</p>
+            </div>
+
+         </div>
+
+          <div id="background-footer">
+                  <a href="https://github.com/Mohaimn94/LA-ProjectSEPA"><img src="static/img/g23.png" alt="GitHub"></a>
+                  <a href="https://www.youtube.com/watch?v=gITrFJQYhfc&feature=youtu.be"> <img src="static/img/youtubei.png" alt="GitHub"> </a>
+                 <div class="footer">
+                        <p>Please contact Orchid group at Orchid.group@gmail.com with problems or questions about this web page.</p>
+                        <p>DISCLAIMER: <em>Student academic performance</em> </p>
+                        <p>&copy; 2020 Student performance. All Rights Reserved.</p>
+                 </div>
+           </div>
+
+   </div>
+
+</body>
+
+</html>

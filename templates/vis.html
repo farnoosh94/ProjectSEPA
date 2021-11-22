@@ -1,0 +1,145 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>visualizetion</title>
+    <!--  jquery.js -->
+    <script src="./static/charts/jquery-3.2.1.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Analysing Charts</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='./css/performance.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='./css/bootstrap.min.css') }}"/>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"> </script>
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+                $(".buttonshape_menu_main").click(function () {
+                    $(".more_menu").hide();
+                    $("#" + this.id + "Menu").show();
+                })
+                $(".buttonshape_menu").click(function () {
+                    var modal = new Custombox.modal({
+                        content: {
+                            effect: 'fadein',
+                            target: '#modal'
+                        },
+                        onClose: $("#modal").hide(),
+                        close: true
+                    });
+                    var page = $(this).attr('htmlPage');
+                    $("#modal").load("charts/" + page + ".htm");
+                    modal.open();
+                })
+//
+            });
+    </script>
+
+
+</head>
+<body>
+	<style>
+	#table1 {
+	border-collapse: separate;
+	border-spacing: 30px 10px;
+}
+</style>
+  <div id="background-header" style="position:absolute;"></div>
+    <div id="container">
+        <div id="header" style="position:absolute;">
+            <img id="logo" src="{{url_for('static', filename='img/sepa.png')}}" alt="Logo" />
+
+
+           <ul id="ul-header">
+              <li><a   href="/">Home</a></li>
+                <li><a href="students">Students</a></li>
+
+                <li><a class="active" href="vis">Visualization</a></li>
+                <li><a href="aboutp">About Project</a></li>
+            </ul>
+
+
+        </div>
+
+        <div id="empty"></div>
+
+        <table>
+        </table>
+
+    </div>
+<div class="cont">
+
+</div>
+
+<div class="row justify-content-md-center">
+  <div class="col-md-auto">
+      <h2 >You can find some chart here</h2>
+  </div>
+</div>
+<div class="row justify-content-md-center" style="margin-bottom:40px">
+      <center class="col-md-auto">
+      <h5>take look for better perspective</h5>
+  </div>
+</div>
+
+
+<figure id="fig" class="highcharts-figure">
+   <select onchange="myFunction(this)">
+        <option >Demographic features</option>
+        <option >AboutParents features</option>
+        <option >Academic background features</option>
+        <option >Behavior features</option>
+   </select>
+</figure>
+
+<select id="genderBox" onchange="newFunction(this)">
+
+</select>
+
+<!-- Button to back Home page -->
+  <div id="container"></div>
+  <div class="btn"> </div>
+<center><a href="/"><button type="button" style="border-radius: 10px;
+color: black; font-size:20px ">Home Page</button></a></center>
+
+            <div id="background-footer-hidden">
+
+        <div class="footer">
+            <p>Please contact Orchid group at Orchid.group@gmail.com with problems or questions about this web page.</p>
+            <p>DISCLAIMER: <em>Student academic performance</em> </p>
+            <p>&copy; 2020 Student performance. All Rights Reserved.</p>
+        </div>
+
+    </div>
+<!-- Footer and Github/Youtube icons -->
+
+    <div id="background-footer">
+        <a href="https://github.com/Mohaimn94/LA-ProjectSEPA"><img src="static/img/g23.png" alt="GitHub"></a>
+<a href="https://github.com/Mohaimn94/mainLaproject"> <img src="static/img/youtubei.png" alt="GitHub"> </a>
+
+        <div class="footer">
+            <p>Please contact Orchid group at Orchid.group@gmail.com with problems or questions about this web page.</p>
+            <p>DISCLAIMER: <em>Student academic performance</em> </p>
+            <p>&copy; 2020 Student performance. All Rights Reserved.</p>
+        </div>
+
+    </div>
+
+   </div>
+
+
+</body>
+
+    <!--  calling our modules from Highcharts with example file -->
+
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/highcharts-more.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+<script src="./static/charts/example.js"></script>
+</html>
